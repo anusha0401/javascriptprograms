@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+</body>
+<script>
+
+var arr = [1,2,8,3,2,2,2,5,1];
+let counts = {};
+
+for (var num of arr) {
+  counts[num] = counts[num] ? counts[num] + 1 : 1;
+}
+console.log(counts);
+console.log(`1 : ${counts[1]}, 2 : ${counts[2]}, 8 : ${counts[8]}, 3: ${counts[3]}, 5: ${counts[5]}`);
+</script>
+</html>

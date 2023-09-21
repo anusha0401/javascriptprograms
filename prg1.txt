@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+</body>
+<script>
+function isDisariumNumber(number) {
+    const numStr = number.toString();
+    let sum = 0;
+  
+    for (let i = 0; i < numStr.length; i++) {
+      const digit = parseInt(numStr[i]);
+      sum += Math.pow(digit, i + 1);
+    }
+  
+    return sum === number;
+  }
+  
+  const userInput = prompt("Enter a number:");
+  const userNumber = parseInt(userInput);
+  
+  if (!isNaN(userNumber)) {
+    if (isDisariumNumber(userNumber)) {
+      alert(userNumber + " is a Disarium number.");
+    } else {
+      alert(userNumber + " is not a Disarium number.");
+    }
+  } else {
+    alert("Invalid input. Please enter a valid number.");
+  }
+  
+</script>
+
+</html>
